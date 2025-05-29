@@ -14,8 +14,17 @@ echo "End"
 
 echo "Start"
 cd /work/u8273333/libcll/
-for ((i=0; i < 4; i++)); do
-	lr=${lrs[$i]}
+for ((i=0; i < 3; i++)); do
+	c=0
+	echo /work/u8273333/libcll/scripts/run_all_experiments_lr_multi_hard.sh ${strategy} ${tp} ${i} ${c}
+	/work/u8273333/libcll/scripts/run_all_experiments_lr_multi_hard.sh ${strategy} ${tp} ${i} ${c} & 
+done
+wait
+echo "End"
+
+echo "Start"
+cd /work/u8273333/libcll/
+for ((i=3; i < 6; i++)); do
 	c=0
 	echo /work/u8273333/libcll/scripts/run_all_experiments_lr_multi_hard.sh ${strategy} ${tp} ${i} ${c}
 	/work/u8273333/libcll/scripts/run_all_experiments_lr_multi_hard.sh ${strategy} ${tp} ${i} ${c} & 
