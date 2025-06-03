@@ -42,10 +42,10 @@ pip install -e .
 | MNIST       | 10              | 28 x 28     | Grayscale images of handwritten digits (0 to 9).             |
 | FMNIST      | 10              | 28 x 28     | Grayscale images of fashion items.                           |
 | KMNIST      | 10              | 28 x 28     | Grayscale images of cursive Japanese (“Kuzushiji”) characters. |
-| Yeast       | 10              | 8           | Features of different localization sites of protein.         |
-| Texture     | 11              | 40          | Features of different textures.                              |
-| Dermatology | 6               | 130         | Clinical Attributes of different diseases.                              |
-| Control     | 6               | 60          | Features of synthetically generated control charts.          |
+| [Yeast](https://www.openml.org/search?type=data&status=active&id=181) | 10              | 8           | Features of different localization sites of protein.         |
+| [Texture](https://www.openml.org/search?type=data&status=active&id=40499) | 11              | 40          | Features of different textures.                              |
+| [Dermatology](https://www.openml.org/search?type=data&status=active&id=35) | 6               | 130         | Clinical Attributes of different diseases.                              |
+| [Control](https://www.openml.org/search?type=data&status=active&id=377) | 6               | 60          | Features of synthetically generated control charts.          |
 | CIFAR10 | 10 | 3 x 32 x 32 | Colored images of different objects. |
 | CIFAR20     | 20              | 3 x 32 x 32 | Colored images of different objects. |
 | Micro ImageNet10   | 10                | 3 x 64 x 64 | Contains images of 10 classes designed for computer vision research. |
