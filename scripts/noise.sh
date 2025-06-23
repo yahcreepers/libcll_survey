@@ -14,9 +14,8 @@ noise=${11}
 source /home/u8273333/.bashrc
 conda activate cll
 
-output_dir="/work/u8273333/libcll/logs/${strategy}/${dataset}-multi_label_${num_cl}-${transition_matrix}_${noise}/${strategy}-${tp}-${model}-${dataset}-${lr}-${seed}"
-# output_dir="/work/u8273333/libcll/logs/test/"
-python /work/u8273333/libcll/scripts/train.py \
+output_dir="logs/${strategy}/${dataset}-multi_label_${num_cl}-${transition_matrix}_${noise}/${strategy}-${tp}-${model}-${dataset}-${lr}-${seed}"
+python scripts/train.py \
     --do_train \
     --do_predict \
     --strategy ${strategy} \

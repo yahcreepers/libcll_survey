@@ -5,9 +5,8 @@ cuda=0
 strategies=($strategy)
 types=(${tp})
 lrs=("1e-3" "5e-4" "1e-4" "5e-5" "1e-5")
-lrs=($(cat "/work/u8273333/libcll/logs/${strategy}/${strategy}-${tp}-noisy.txt"))
+lrs=($(cat "logs/${strategy}/${strategy}-${tp}-noisy.txt"))
 datasets=("mnist" "kmnist" "fmnist" "cifar10" "micro_imagenet10")
-echo ${lrs[@]}
 for strategy in ${strategies[@]}; do
     i=0
     for dataset in ${datasets[@]}; do
@@ -26,8 +25,8 @@ for strategy in ${strategies[@]}; do
             i=$(($i+1))
             for t in ${types[@]}; do
                 for model in ${models[@]}; do
-                    echo "/work/u8273333/libcll/scripts/noise.sh ${cuda} ${strategy} ${t} ${model} ${dataset} ${valid_type} ${multi} noisy ${lr} ${seed} ${noise}"
-                    /work/u8273333/libcll/scripts/noise.sh ${cuda} ${strategy} ${t} ${model} ${dataset} ${valid_type} ${multi} noisy ${lr} ${seed} ${noise}
+                    echo "scripts/noise.sh ${cuda} ${strategy} ${t} ${model} ${dataset} ${valid_type} ${multi} noisy ${lr} ${seed} ${noise}"
+                    scripts/noise.sh ${cuda} ${strategy} ${t} ${model} ${dataset} ${valid_type} ${multi} noisy ${lr} ${seed} ${noise}
                 done
             done
         done

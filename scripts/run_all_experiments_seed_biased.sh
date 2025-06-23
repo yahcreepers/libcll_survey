@@ -5,7 +5,7 @@ cuda=0
 strategies=($strategy)
 types=(${tp})
 lrs=("1e-3" "5e-4" "1e-4" "5e-5" "1e-5")
-lrs=($(cat "/work/u8273333/libcll/logs/${strategy}/${strategy}-${tp}-biased.txt"))
+lrs=($(cat "logs/${strategy}/${strategy}-${tp}-biased.txt"))
 datasets=("mnist" "kmnist" "fmnist" "cifar10" "micro_imagenet10")
 echo ${lrs[@]}
 for strategy in ${strategies[@]}; do
@@ -25,8 +25,8 @@ for strategy in ${strategies[@]}; do
             i=$(($i+1))
             for t in ${types[@]}; do
                 for model in ${models[@]}; do
-                    echo "/work/u8273333/libcll/scripts/seed.sh ${cuda} ${strategy} ${t} ${model} ${dataset} ${valid_type} ${multi} ${dis} ${lr} ${seed}"
-                    /work/u8273333/libcll/scripts/seed.sh ${cuda} ${strategy} ${t} ${model} ${dataset} ${valid_type} ${multi} ${dis} ${lr} ${seed}
+                    echo "scripts/seed.sh ${cuda} ${strategy} ${t} ${model} ${dataset} ${valid_type} ${multi} ${dis} ${lr} ${seed}"
+                    scripts/seed.sh ${cuda} ${strategy} ${t} ${model} ${dataset} ${valid_type} ${multi} ${dis} ${lr} ${seed}
                 done
             done
         done

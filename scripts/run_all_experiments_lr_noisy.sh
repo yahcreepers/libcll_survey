@@ -22,8 +22,8 @@ for strategy in ${strategies[@]}; do
             for model in ${models[@]}; do
                 for lr in ${lrs[@]}; do
                     for noise in "0.1" "0.2" "0.5"; do
-                        echo "/work/u8273333/libcll/scripts/noise.sh ${cuda} ${strategy} ${t} ${model} ${dataset} ${valid_type} ${multi} noisy ${lr} 1126 ${noise}"
-                        /work/u8273333/libcll/scripts/noise.sh ${cuda} ${strategy} ${t} ${model} ${dataset} ${valid_type} ${multi} noisy ${lr} 1126 ${noise}
+                        echo "scripts/noise.sh ${cuda} ${strategy} ${t} ${model} ${dataset} ${valid_type} ${multi} noisy ${lr} 1126 ${noise}"
+                        scripts/noise.sh ${cuda} ${strategy} ${t} ${model} ${dataset} ${valid_type} ${multi} noisy ${lr} 1126 ${noise}
                     done
                 done
             done

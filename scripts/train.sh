@@ -8,8 +8,8 @@ valid_type=$6
 num_cl=$7
 transition_matrix=$8
 
-output_dir="./logs/${strategy}/${dataset}-multi_label_${num_cl}-${transition_matrix}/${strategy}-${tp}-${model}-${dataset}"
-output_dir="./logs/test/${strategy}/${dataset}-multi_label_${num_cl}-${transition_matrix}/${strategy}-${tp}-${model}-${dataset}"
+output_dir="logs/${strategy}/${dataset}-multi_label_${num_cl}-${transition_matrix}/${strategy}-${tp}-${model}-${dataset}"
+output_dir="logs/test/${strategy}/${dataset}-multi_label_${num_cl}-${transition_matrix}/${strategy}-${tp}-${model}-${dataset}"
 python scripts/train.py \
     --do_train \
     --do_predict \

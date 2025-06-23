@@ -59,6 +59,23 @@ pip install -e .
 | ACLMicro ImageNet10 | 10 | 3 x 64 x 64 | Contains images of 10 classes designed for computer vision research paired with complementary labels annotated by Visual-Language Models. |
 | ACLMicro ImageNet20 | 20 | 3 x 64 x 64 | Contains images of 20 classes designed for computer vision research paired with complementary labels annotated by Visual-Language Models. |
 
+## Quick Start: Complementary Label Learning on MNIST
+
+To reproduce training results with the SCL-NL method on MNIST
+
+```shell
+python script/train.py \
+  --do_train \
+  --do_predict \
+  --strategy SCL \
+  --type NL \
+  --model MLP \
+  --dataset MNIST \
+  --lr 1e-4 \
+  --batch_size 256 \
+  --valid_type Accuracy \
+```
+
 ## Run all the settings in the survey paper
 
 To reproduce results in survey paper:

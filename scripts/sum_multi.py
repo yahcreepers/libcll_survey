@@ -10,18 +10,14 @@ import torch
 key = "noise_real_0."
 key = "uniform"
 key = "multi_label_3"
-path = "/work/u8273333/libcll/logs"
+path = "logs"
 datasets = ["mnist", "kmnist", "fmnist", "cifar10"]
 datasets = ["mnist", "kmnist", "fmnist", "yeast", "texture", "dermatology", "control", "cifar10", "cifar20", "micro_imagenet10", "micro_imagenet20", "clcifar10", "clcifar20", "clmicro_imagenet10", "clmicro_imagenet20"]
 datasets = ["mnist", "kmnist", "fmnist", "cifar10", "cifar20", "micro_imagenet10", "micro_imagenet20"]
 datasets = ["yeast", "texture", "dermatology", "control"]
 datasets = ["clcifar10", "clcifar20", "clmicro_imagenet10", "clmicro_imagenet20"]
-# datasets = ["micro_imagenet10", "micro_imagenet20", "clmicro_imagenet10", "clmicro_imagenet20"]
-# strategies = {"SCL": {"NL": {}, "EXP": {}, "FWD": {}}, "URE": {"NN": {}, "TNN": {}, "GA": {}, "TGA": {}}, "DM": {"None": {}}, "CPE": {"I": {}, "F": {}, "T": {}}}
-# strategies = {"SCL": {"NL": {}, "EXP": {}, "FWD": {}}, "URE": {"NN": {}, "TNN": {}, "GA": {}, "TGA": {}}, "CPE": {"I": {}, "F": {}, "T": {}}}
-strategies = {"SCL-NL": {}, "SCL-EXP": {}, "SCL-FWD": {}, "URE-NN": {}, "URE-GA": {}, "DM-None": {}, "MCL-MAE": {}, "MCL-EXP": {}, "MCL-LOG": {}, "FWD-None": {}, "URE-TNN": {}, "URE-TGA": {}, "CPE-I": {}, "CPE-F": {}, "CPE-T": {}}
-SS = [["SCL-NL", "SCL-EXP", "URE-NN", "URE-GA", "DM-None", "MCL-MAE", "MCL-EXP", "MCL-LOG"], ["SCL-FWD", "URE-TNN", "URE-TGA", "CPE-I", "CPE-F", "CPE-T"]]
-# SS = [["CPE-F"]]
+strategies = {"SCL-NL": {}, "SCL-EXP": {}, "SCL-FWD": {}, "URE-NN": {}, "URE-GA": {}, "DM": {}, "SCARCE": {}, "OP": {}, "PC": {}, "MCL-MAE": {}, "MCL-EXP": {}, "MCL-LOG": {}, "FWD": {}, "URE-TNN": {}, "URE-TGA": {}, "CPE-I": {}, "CPE-F": {}, "CPE-T": {}}
+SS = [["PC", "SCL-NL", "SCL-EXP", "URE-NN", "URE-GA", "DM", "MCL-MAE", "MCL-EXP", "MCL-LOG", "OP", "SCARCE"], ["SCL-FWD", "URE-TNN", "URE-TGA", "CPE-I", "CPE-F", "CPE-T"]]
 output_file = sys.argv[1]
 
 file_names = glob.glob(f"{path}/*/*{key}*/*")

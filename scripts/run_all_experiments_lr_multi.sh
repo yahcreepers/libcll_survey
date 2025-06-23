@@ -21,8 +21,8 @@ for strategy in ${strategies[@]}; do
         for t in ${types[@]}; do
             for model in ${models[@]}; do
                 for lr in ${lrs[@]}; do
-                    echo "/work/u8273333/libcll/scripts/lr.sh ${cuda} ${strategy} ${t} ${model} ${dataset} ${valid_type} ${multi} uniform ${lr}"
-                    /work/u8273333/libcll/scripts/lr.sh ${cuda} ${strategy} ${t} ${model} ${dataset} ${valid_type} ${multi} uniform ${lr}
+                    echo "scripts/lr.sh ${cuda} ${strategy} ${t} ${model} ${dataset} ${valid_type} ${multi} uniform ${lr}"
+                    scripts/lr.sh ${cuda} ${strategy} ${t} ${model} ${dataset} ${valid_type} ${multi} uniform ${lr}
                 done
             done
         done

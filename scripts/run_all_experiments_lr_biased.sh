@@ -22,8 +22,8 @@ for strategy in ${strategies[@]}; do
             for model in ${models[@]}; do
                 for lr in ${lrs[@]}; do
                     for dis in "weak" "strong"; do
-                        echo "/work/u8273333/libcll/scripts/lr.sh ${cuda} ${strategy} ${t} ${model} ${dataset} ${valid_type} ${multi} ${dis} ${lr}"
-                        /work/u8273333/libcll/scripts/lr.sh ${cuda} ${strategy} ${t} ${model} ${dataset} ${valid_type} ${multi} ${dis} ${lr}
+                        echo "scripts/lr.sh ${cuda} ${strategy} ${t} ${model} ${dataset} ${valid_type} ${multi} ${dis} ${lr}"
+                        scripts/lr.sh ${cuda} ${strategy} ${t} ${model} ${dataset} ${valid_type} ${multi} ${dis} ${lr}
                     done
                 done
             done

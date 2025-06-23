@@ -6,7 +6,7 @@ from tensorboard.backend.event_processing.event_accumulator import EventAccumula
 
 key = "noise_real_0."
 key = "uniform"
-path = "/work/u8273333/libcll/logs"
+path = "logs"
 datasets = ["mnist", "kmnist", "fmnist", "cifar10", "micro_imagenet10"]
 strategies = {"SCL-NL": {}, "SCL-EXP": {}, "SCL-FWD": {}, "URE-NN": {}, "URE-GA": {}, "DM-None": {}, "SCARCE-None": {}, "OP-None": {}, "PC-None": {}, "MCL-MAE": {}, "MCL-EXP": {}, "MCL-LOG": {}, "FWD-None": {}, "URE-TNN": {}, "URE-TGA": {}, "CPE-I": {}, "CPE-F": {}, "CPE-T": {}}
 sss = sys.argv[1]

@@ -5,7 +5,7 @@ cuda=0
 strategies=($strategy)
 types=(${tp})
 lrs=("1e-3" "5e-4" "1e-4" "5e-5" "1e-5")
-lrs=($(cat "/work/u8273333/libcll/logs/${strategy}/${strategy}-${tp}-uniform.txt"))
+lrs=($(cat "logs/${strategy}/${strategy}-${tp}-uniform.txt"))
 datasets=('mnist' 'kmnist' 'fmnist' 'yeast' 'texture' 'control' 'dermatology' 'cifar10' 'cifar20' 'micro_imagenet10' 'micro_imagenet20' 'clcifar10' 'clcifar20' 'clmicro_imagenet10' 'clmicro_imagenet20' 'aclcifar10' 'aclcifar20' 'aclmicro_imagenet10' 'aclmicro_imagenet20')
 for strategy in ${strategies[@]}; do
     for ((i=0; i < ${#datasets[@]}; i++)); do
@@ -24,8 +24,8 @@ for strategy in ${strategies[@]}; do
         multi=1
         for t in ${types[@]}; do
             for model in ${models[@]}; do
-                echo "/work/u8273333/libcll/scripts/seed.sh ${cuda} ${strategy} ${t} ${model} ${dataset} ${valid_type} ${multi} uniform ${lr} ${seed}"
-                /work/u8273333/libcll/scripts/seed.sh ${cuda} ${strategy} ${t} ${model} ${dataset} ${valid_type} ${multi} uniform ${lr} ${seed}
+                echo "scripts/seed.sh ${cuda} ${strategy} ${t} ${model} ${dataset} ${valid_type} ${multi} uniform ${lr} ${seed}"
+                scripts/seed.sh ${cuda} ${strategy} ${t} ${model} ${dataset} ${valid_type} ${multi} uniform ${lr} ${seed}
                 
             done
         done

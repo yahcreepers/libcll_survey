@@ -5,7 +5,7 @@ import sys
 from tensorboard.backend.event_processing.event_accumulator import EventAccumulator
 
 key = "multi_label_1-uniform"
-path = "/work/u8273333/libcll/logs"
+path = "logs"
 datasets = ["mnist", "kmnist", "fmnist", "yeast", "texture", "control", "dermatology", "cifar10", "cifar20", "micro_imagenet10", "micro_imagenet20", "clcifar10", "clcifar20", "clmicro_imagenet10", "clmicro_imagenet20", "aclcifar10", "aclcifar20", "aclmicro_imagenet10", "aclmicro_imagenet20"]
 strategies = {"SCL-NL": {}, "SCL-EXP": {}, "SCL-FWD": {}, "URE-NN": {}, "URE-GA": {}, "DM-None": {}, "SCARCE-None": {}, "OP-None": {}, "PC-None": {}, "MCL-MAE": {}, "MCL-EXP": {}, "MCL-LOG": {}, "FWD-None": {}, "URE-TNN": {}, "URE-TGA": {}, "CPE-I": {}, "CPE-F": {}, "CPE-T": {}}
 sss = sys.argv[1]
